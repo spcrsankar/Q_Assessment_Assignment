@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      /* background: url(images/bg.jpg) no-repeat top left fixed;
+      background-size: 100% 100%;
+      opt */
+    }
+
+    .about-me{
+      display: grid;
+      grid-template-columns: 0.6fr 0.4fr;
+      width: 100%;
+      height: 100%;
+      max-width: 600px;
+      margin-top: 20px;
+    }
+
+    .description{
+      margin: 10% 5%;
+      background-color: white;
+      box-shadow: 2px 2px 5px 2px #aaa;
+      border-radius: 2px;
+    }
+    
+    img{
+      background-color: white;
+      box-shadow: 2px 2px 5px 2px #aaa;
+      border-radius: 2px;
+    }
+
+    img#bg{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    .hobbies{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+    }
+    .hobbies .title{
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: blue;
+      color:white;
+      width: 200px;
+    }
+
+    .hobbies-details{
+      display: flex;
+      flex-direction: row;
+      column-gap: 20px;
+    }
+
+    .hobby img{
+      width: 300px;
+      height: 250px;
+      border-radius: 5px;
+    }
+
+    .hobby{
+      background-color: white;
+      box-shadow: 1px 1px 5px 1px #777;
+      border-radius: 5px;
+    }
+
+    .hobby div{
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello! Sankaralingam</h1>
+  <div class="about-me">
+    <div class="description">
+      <p>Description in single line</p>
+    </div>
+    <div>
+      <img src="images/profile.png" alt="profile photo">
+    </div>
+  </div>
+
+  <div class="hobbies">
+    <div class="title">My hobbies</div>
+    <div class="hobbies-details">
+      <div class="hobby">
+        <img src="images/cricket.jpg" alt="cricket">
+        <div>Cricket</div>
+      </div>
+      
+      <div class="hobby">
+        <img src="images/game.jpg" alt="Game">
+        <div>Gaming</div>
+      </div>
+      
+      <div class="hobby">
+        <img src="images/coding.jpg" alt="Coding">
+        <div>Coding</div>
+      </div>
+    </div>
+
+  </div>
+  <img src="images/bg.jpg" alt="bg" id="bg">
+</body>
+</html>
