@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav>
+    <img src="images/logo.png" alt="logo" class="logo" />
+    <p>
+      <span><b>Mumbai </b> Mahrastra, India</span>
+      <span><img src="images/arrow_down.png" alt="arrow_down" class="down-arrow" /></span>
+    </p>
+    <ul>
+      <li>
+        <img src="images/search.png" alt="search" />
+        <p>Search</p>
+      </li>
+      <li>
+        <img src="images/help.png" alt="Help" />
+        <p>Search</p>
+      </li>
+      <li>
+        <img src="images/user.png" alt="search" />
+        <p>User</p>
+      </li>
+      <li>
+        <img src="images/cart.png" alt="search" id="cart" />
+        <p>Cart</p>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="delivery-details">
+
+      <div class="address-area">
+        <h2>Select Address</h2>
+        <div class="address">
+          <div class="address-header">
+            <h3>Home</h3><span><img src="images/edit.png" alt="edit" /></span>
+          </div>
+          <div class="editable-address">
+            <p>60,116 colony,</p>
+            <p>Apk Road, Virudunagar</p>
+          </div>
+          <button>DELIVER HERE</button>
+        </div>
+      </div>
+
+      <div class="payment-area">
+        <h2>Payment</h2>
+        <div>
+          <table class="payment-table">
+            <tr>
+              <td colspan="2">
+                <input type="text" placeholder="Card number">
+              </td>
+            </tr>
+            <tr>
+              <td><input type="text" placeholder="Valid through (MM/YY)"></td>
+              <td><input type="text" placeholder="CVV"></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <input type="text" placeholder="Name on card">
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="payment-button-area">
+          <button>Pay Rs.500</button>
+          <img src="images/visa-card.png" alt="visa-card-logo" width="300px" height="200px">
+        </div>
+      </div>
+    </div>
+    
+<!-- purchase detial area -->
+    <div class="purchase-details">
+      <div class="purchase-details-header">
+        <img src="images/fruits.jpg" alt="fruits" id="fruits">
+        <div>
+          <h3>FARM FRESH STORE</h3>
+          <p>Malad west</p>
+        </div>
+      </div>
+
+      <div class="purchased-product-details">
+        <div>
+          <h4>Tomatoes</h4>
+          <p><span>-</span><span>1</span><span>+</span></p>
+          <p><span>&#8377</span>200</p>
+        </div>
+        <div>
+          <h4>Carrot</h4>
+          <p><span>-</span><span>2</span><span>+</span></p>
+          <p><span>&#8377</span>150</p>
+        </div>
+        <div>
+          <h4>Cabbage</h4>
+          <p><span>-</span><span>1</span><span>+</span></p>
+          <p><span>&#8377</span>100</p>
+        </div>
+      </div>
+
+      <div class="bill-detail">
+        <h3>Bill Details </h3>
+        <div class="bill-total">
+          <p>Item Total</p>
+          <p><span>&#8377</span>450</p>
+          <p>Delivery</p>
+          <p><span>&#8377</span>50</p>
+        </div>
+      </div>
+
+      <div class="pay-detail">
+        <p>TO PAY</p>
+        <p><span>&#8377</span>500</p>
+      </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
