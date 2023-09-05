@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      display:flex;
+      flex-direction: column;
+      width: 50%;
+      min-width: 200px;
+      align-items: center;
+      margin: 10% auto;
+    }
+    .shape {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      margin: 20px;
+      animation: squareToBall 1s forwards;
+      /* Define the animation */
+    }
+
+    @keyframes squareToBall {
+      0% {
+        border-radius: 0%;
+        /* Start with square */
+      }
+
+      100% {
+        border-radius: 50%;
+        /* End with a circle */
+      }
+    }
+
+    @keyframes ballToSquare {
+      0% {
+        border-radius: 50%;
+        /* Start with square */
+      }
+
+      100% {
+        border-radius: 0%;
+        /* End with a circle */
+      }
+    }
+
+    button{
+      background-color: aqua;
+      color: white;
+      font-weight: 600;
+      border: none;
+      padding: 10px;
+      width: 100px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="shape"></div>
+  <button onclick="animateSquareToBall()">Animate</button>
+  <script>
+    let flag = true
+    function animateSquareToBall() {
+      console.log(flag)
+      if(flag === true)  
+        document.querySelector(".shape").style.animation = "ballToSquare 1s forwards";
+      else
+        document.querySelector(".shape").style.animation = "squareToBall 1s forwards";
+      flag = !flag
+    }
+
+  </script>
+</body>
+
+</html>
