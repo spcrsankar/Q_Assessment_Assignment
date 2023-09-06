@@ -121,7 +121,7 @@ nav p,li{
 }
 
 button{
-  background-color: rgb(172, 205, 193);
+  /* background-color: rgb(172, 205, 193); */
   background-color: rgb(170, 210, 207);
   border:none;
   color: white;
@@ -129,6 +129,15 @@ button{
   height: 30px;
   font-weight: 700;
   font-size: 12px;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: rgb(171, 228, 225);
+}
+
+#address-edit{
+  cursor: pointer;
 }
 
 .payment-area{
