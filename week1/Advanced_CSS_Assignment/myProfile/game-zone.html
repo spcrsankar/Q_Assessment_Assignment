@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/game-zone.css">
+  <link rel="stylesheet" href="styles/navBar.css">
+</head>
+
+<body>
+  <nav class="navigation-bar">
+    <ul>
+      <li id="home"><a href="index.html">Home</a></li>
+      <li id="about-me"><a href="about.html">About me</a></li>
+      <li id="product"><a href="product-form.html">Product</a></li>
+      <li id="game-zone"><a href="game-zone.html">Game Zone</a></li>
+    </ul>
+  </nav>
+  <div class="body">
+  <div class="shape"></div>
+  <button onclick="animateSquareToBall()">Animate</button>
+  </div>
+  <script>
+    let flag = true
+    function animateSquareToBall() {
+      console.log(flag)
+      if(flag === true)  
+        document.querySelector(".shape").style.animation = "ballToSquare 1s forwards";
+      else
+        document.querySelector(".shape").style.animation = "squareToBall 1s forwards";
+      flag = !flag
+    }
+  </script>
+  <script src="script/navBar.js"></script>
+</body>
+
+</html>

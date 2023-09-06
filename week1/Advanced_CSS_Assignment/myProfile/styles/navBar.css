@@ -1,0 +1,26 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+nav.navigation-bar{
+  background-color: #333;
+}
+nav.navigation-bar ul{
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  list-style-type: none;
+  padding: 10px;
+  color:white;
+}
+
+nav.navigation-bar ul li:hover{
+  cursor: pointer;
+  color:antiquewhite
+}
+
+a{
+  color:white;
+  text-decoration: none;
+}
