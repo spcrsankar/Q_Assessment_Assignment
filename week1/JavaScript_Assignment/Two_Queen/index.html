@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    h1 {
+      text-align: center;
+      color: rgb(121, 121, 195);
+      text-shadow: 2px 1px 1px rgb(105, 103, 103);
+    }
+
+    .container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      column-gap: 5%;
+    }
+
+    #board {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(9, 1fr);
+      /* width: 400px;
+      height: 400px; */
+      align-items: centers;
+      text-align: center;
+    }
+
+    .position {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    .square {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+      border: 1px solid rgb(0, 0, 0);
+      color: red;
+    }
+
+    .square:nth-child(odd) {
+      background-color: #444;
+    }
+
+    .input-area{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 30px;
+    }
+
+    input{
+      width: 200px;
+      height: 30px;
+    }
+
+    label{
+      font-size: 20px;
+      margin-right: 20px;
+      font-weight: 600;
+    }
+
+    .attack{
+      color:red;
+    }
+
+    .no-attack{
+      color:green;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Two Queen Attack</h1>
+  <div class="container">
+    <div id="board">
+
+    </div>
+    <div class="input-area">
+      <h2 id="status" class="no-attack">No Attack</h2>
+      <div><label for="queen1">Queen1 postion</label><input type="text" id="queen1"></div>
+      <div><label for="queen2">Queen2 postion</label><input type="text" id="queen2"></div>
+    </div>
+  </div>
+  <script src="TwoQueenAttack.js"></script>
+
+</body>
+
+</html>

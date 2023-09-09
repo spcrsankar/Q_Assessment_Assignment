@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .data {
+      padding: 10px;
+      border: 1px solid rgb(199, 199, 199);
+      box-shadow: 1px 2px 2px 1px rgb(199, 199, 199);
+    }
+
+    .data h1 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 600;
+      color: rgb(63, 22, 22);
+      text-shadow: 1px 1px 2px rgb(12, 1, 1);
+      text-decoration: underline;
+    }
+
+    #actors-data,
+    #genre-data {
+      padding: 10px;
+      color: rgb(236, 64, 64);
+      font-size: 16px;
+      font-weight: 500;
+      box-shadow: 0px 0px 1px 1px rgb(199, 199, 199);
+      white-space: pre-wrap;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: 1fr ;
+    }
+
+    /* Apply different styles when the viewport width is 900px or more */
+    @media (min-width: 900px) {
+      .details {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        column-gap: 20px;
+        width: 100%;
+      }
+    }
+
+    h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="data">
+    <h1>Movie Data of 2010's</h1>
+    <div class="details">
+      <div>
+        <h2>Actors</h2>
+        <pre id="actors-data">
+          Loading...
+        </pre>
+      </div>
+      <div>
+        <h2>Genre</h2>
+        <pre id="genre-data">
+        Loading...
+        </pre>
+      </div>
+    </div>
+  </div>
+  <script src="MoviesData.js"></script>
+</body>
+
+</html>
