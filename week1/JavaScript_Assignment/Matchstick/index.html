@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    body{
+      background-color: aliceblue;
+    }
     .container{
       display: flex;
       flex-direction: column;
@@ -12,9 +15,21 @@
       align-items: center;
       row-gap: 30px;
     }
-    span{
+    #sticks  {
       color: red;
       font-size: 20px;
+    }
+    label{
+      font-size: 16px;
+      font-weight: bold;
+    }
+    input{
+      width: 100px;
+      /* height: 30px; */
+      font-size: 16px;
+      margin-left: 10px;
+      box-shadow: 1px 1px 2px 1px grey;
+      border: none;
     }
   </style>
 </head>
@@ -27,7 +42,7 @@
       <input type="number" name="houses" id="houses">
     </div>
     <diV>
-      <h2>Number of Sticks needed : <span>20</span></h2>
+      <h2>Number of Sticks needed : <span id="sticks">20</span></h2>
     </diV>
   </div>
   <script src="Matchsticks.js">  </script>

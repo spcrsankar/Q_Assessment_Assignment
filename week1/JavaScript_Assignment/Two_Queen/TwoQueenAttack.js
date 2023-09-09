@@ -60,8 +60,8 @@ function canAttack() {
 }
 
 //update board
-function updateBoard(board,boardMatrix) {
-  console.log(boardMatrix);
+function updateBoard() {
+
   for(let i = 0 ; i < 8; i++){
     for(let j = 0; j < 8; j++){
       let square = document.querySelector(`#square_${i}_${String.fromCharCode(97 + j)}`);
@@ -76,9 +76,7 @@ function updateBoard(board,boardMatrix) {
       }
     }
   }
-  console.log("check for attack -------- ")
-  console.log(queen1_current_pos,queen2_current_pos);
-  // console.log(isAttack());
+
   if(isAttack()){
     document.querySelector("#status").classList = ["attack"]
     document.querySelector("#status").innerHTML = "Attack";
@@ -124,7 +122,7 @@ queen1_input.addEventListener("input", function (e) {
     if (boardMatrix[row][col] === 0) {
       boardMatrix[row][col] = QUEEN1;
       queen1_current_pos = [row, col];
-      updateBoard(board,boardMatrix);
+      updateBoard();
     } 
     else{
       alert("Queen already present at this position")
@@ -135,7 +133,7 @@ queen1_input.addEventListener("input", function (e) {
       boardMatrix[queen1_current_pos[0]][queen1_current_pos[1]] = 0;
     }
     queen1_current_pos = null;
-    updateBoard(board,boardMatrix);
+    updateBoard();
   }
 })
 
@@ -148,7 +146,7 @@ queen2_input.addEventListener("input", function (e) {
     if (boardMatrix[row][col] === 0) {
       boardMatrix[row][col] = QUEEN2;
       queen2_current_pos = [row, col];
-      updateBoard(board,boardMatrix);
+      updateBoard();
     } 
     else{
       alert("Queen already present at this position")
@@ -159,7 +157,7 @@ queen2_input.addEventListener("input", function (e) {
       boardMatrix[queen2_current_pos[0]][queen2_current_pos[1]] = 0;
     }
     queen2_current_pos = null;
-    updateBoard(board,boardMatrix);
+    updateBoard();
   }
 })
 

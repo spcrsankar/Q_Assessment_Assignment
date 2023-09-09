@@ -1,5 +1,5 @@
 
-const movies_url = 'https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies-2010s.json?year=2001'
+const movies_url = 'https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies-2010s.json?'
 
 async function fetchMovies(url) {
   const movies = await fetch(url)
