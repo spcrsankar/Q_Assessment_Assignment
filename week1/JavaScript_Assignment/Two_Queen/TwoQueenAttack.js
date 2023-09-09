@@ -9,7 +9,6 @@ let boardMatrix = [];
 
 //update the board with 64 squares
 function createBoard(board) {
-  console.log("update board");
   let html = '<div class="position"> </div>';
   for (let i = 0; i < 8; i++) {
     html += `<div class="position"> ${String.fromCharCode(97 + i)}</div>`;
@@ -77,7 +76,7 @@ function updateBoard() {
     }
   }
 
-  if(isAttack()){
+  if(canAttack()){
     document.querySelector("#status").classList = ["attack"]
     document.querySelector("#status").innerHTML = "Attack";
   }
@@ -113,8 +112,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //add event listener to the input field
 queen1_input.addEventListener("input", function (e) {
-  console.log(e.target.value)
   let val = e.target.value;
+  
   if (isValidInput(val)) {
     let row = parseInt(val[1]) - 1;
     let col = val.toLowerCase().charCodeAt(0) - 97;
