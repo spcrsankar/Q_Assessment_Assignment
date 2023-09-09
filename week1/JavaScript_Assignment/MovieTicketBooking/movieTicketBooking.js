@@ -82,8 +82,8 @@ book_ticket_button.addEventListener('click', function(e) {
       return;
     }
   }
-
-  if(no_of_seats !== seats_number.length){
+  
+  if(no_of_seats != seats_number.length){
     alert('number of seats and seats number are not equal');
     return;
   }
