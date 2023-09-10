@@ -5,6 +5,7 @@ const book_ticket_button = document.querySelector('#book_ticket_button');
 function createSeats() {
   let html = '';
   
+  //create 64 squares in UI
   for (let i = 0; i < 8; i++) {
     for (let j = 0; j < 8; j++) {
       html += `<div 
@@ -26,6 +27,7 @@ function createSeats() {
 
 }
 
+
 //show alert when user confirms
 function showAlert() {
   var result = confirm("Do you want to proceed?");  
@@ -36,10 +38,6 @@ function showAlert() {
 
 //update the seats with 64 squares
 function bookSeat(row,col) {
-  //check the seat is booked or not
-  if(seatsArray[row][col] === true) {
-    return false;
-  }
 
   //update the seat array
   seatsArray[row][col] = true;
@@ -51,6 +49,7 @@ function bookSeat(row,col) {
 
   return true;
 }
+
 
 //check the seat is valid or not
 function isValidSeatNumber(seat_number){
@@ -66,6 +65,7 @@ function isValidSeatNumber(seat_number){
 }
 
 
+
 //book ticket button click event
 book_ticket_button.addEventListener('click', function(e) {
   e.preventDefault();
@@ -73,24 +73,45 @@ book_ticket_button.addEventListener('click', function(e) {
   const no_of_seats = document.querySelector('#no-of-seats').value;
   const seats_number = document.querySelector('#seats-number').value.trim().split(",");
 
+  //check seats numbers are valid or not
   for(let seat_number of seats_number){
     seat_number = seat_number.trim();
 
-    //check seat number is valid or not
     if(!isValidSeatNumber(seat_number)) {
       alert('Please enter valid seat numbers');
       return;
     }
   }
   
+
+
+  //check number of seats and seats number are equal or not
   if(no_of_seats != seats_number.length){
     alert('number of seats and seats number are not equal');
     return;
   }
 
+
+
+  //check seat is already booked or not
+  let booked_seats = [];
+  for(let seat_number of seats_number){
+    seat_number = seat_number.trim();
+    const row = seat_number[0] - 1;
+    const col = seat_number[1] - 1;
+    if(seatsArray[row][col] === true) {
+      booked_seats.push(seat_number);
+    }
+  }
+  if(booked_seats.length > 0) {
+    alert(`Seat ${booked_seats.join(',')} is already booked`);
+    return;
+  }
+
+
+
   //confrim the booking
   if(showAlert()){
-
     for(let seat_number of seats_number){
       seat_number = seat_number.trim();
       const row = seat_number[0] - 1;
@@ -108,6 +129,8 @@ book_ticket_button.addEventListener('click', function(e) {
   }
   
 });
+
+
 
 //create seats when page is loaded
 document.addEventListener('DOMContentLoaded', function() {
