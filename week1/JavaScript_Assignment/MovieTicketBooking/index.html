@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
     *{
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -85,6 +86,35 @@
       width: 200px;
       padding: 15px;
     }
+
+    #alert{
+      display: flex;
+      position: absolute;
+      top:0;
+      left:0;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      font-size: 20px;
+      font-weight: 600;
+      color: #111a12;
+      opacity: 0.9;
+      /* transition: opacity 0.6s ease-in-out; */
+      background-color: hsl(100, 4%, 84%);
+    }
+    
+    #msgbox{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background-color: #5de866;
+      border-radius: 10px;
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -98,6 +128,16 @@
       <div><label for="seats-number">Seats Number</label><input type="text" id="seats-number" placeholder="Example: 11,12,13"></div>
       <button id="book_ticket_button">Book Ticket</button>
     </form>
+  </div>
+
+  <div id="alert" style="display: none;">
+    <div id="msgbox">
+      <p id="alert-msg"></p>
+      <div>
+      <button id="btn1"></button>
+      <button id="btn2"></button>
+    </div>
+    </div>
   </div>
   <script src="movieTicketBooking.js"></script>
 </body>
