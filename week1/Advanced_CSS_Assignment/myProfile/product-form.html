@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me</title>
-  <link rel="stylesheet" href="styles/navBar.css">
-  <link rel="stylesheet" href="styles/about.css">
+  <link rel="stylesheet" href="styles/navBar.css" />
   <style>
-    ol li a{
+    html {
+      background-color: rgb(210, 207, 245);
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: bold;
+      color: rgb(93, 91, 227);
+      text-shadow: 1px 1px 2px #777;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .body {
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    ol {
+      width: 100%;
+    }
+
+    ol li a {
       color: black;
       text-decoration: underline;
-      padding: 20px;
-      list-style-type:decimal;
+      /* padding: 20px; */
+      list-style-type: decimal;
     }
-    ol li{
-      padding:20px;
-      background-color: #f2f2f2;
+
+    ol li {
+      padding: 20px;
+      background-color: #cee9f6;
       display: flex;
       margin: 0 auto;
       margin-bottom: 20px;
+      width: 80%;
+      align-items: center;
+      border-radius: 20px;
     }
   </style>
 </head>
-<body>
 
+<body>
   <nav class="navigation-bar">
     <ul>
       <li id="home"><a href="index.html">Home</a></li>
@@ -32,12 +58,22 @@
       <li id="game-zone"><a href="game-zone.html">Game Zone</a></li>
     </ul>
   </nav>
-
-  <ol>
-    <li><a href="Advanced_HTML_Assignment/Embed_Video/index.html" target="_blank">Video Embedded Project</a></li>
-    <li><a href="Advanced_HTML_Assignment/Form/index.html" target="_blank">Form Project</a></li>
-    <li><a href="Advanced_HTML_Assignment/Simple_Table/index.html" target="_blank">Simple Table Project</a></li>
-  </ol>
+  <div class="body">
+    <h1>Products</h1>
+    <ol>
+      <li>
+        👉<a href="Advanced_HTML_Assignment/Embed_Video/index.html" target="_blank">Video Embedded Project</a>
+      </li>
+      <li>
+        👉<a href="Advanced_HTML_Assignment/Form/index.html" target="_blank">Form Project</a>
+      </li>
+      <li>
+       👉<a href="Advanced_HTML_Assignment/Simple_Table/index.html" target="_blank">Simple Table
+          Project</a>
+      </li>
+    </ol>
+  </div>
   <script src="script/navBar.js"></script>
 </body>
+
 </html>
